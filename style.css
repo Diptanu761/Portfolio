@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    
+}
+:root {
+    --bg-color: #fdf;
+    --white-color: #fdf;
+    --text-color: #333;
+    --main-color: #0c17ff;
+    --shadow-color: rgba(0, 0, 0, .2);
+}
+
+html{
+   font: 62.5%; 
+   overflow: hidden;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;  
+    padding: 1rem 7%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 1.8rem;
+    color: var(--main-color);
+    font-weight: 600;
+    cursor: default;
+    margin-right: auto;
+}
+
+.navbar a{
+    font-size: 1.33rem;
+    color: var(--white-color);
+    margin-right: 1.9rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    position: relative;
+    
+}
+.navbar a.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: .1800rem;
+    background: var(--white-color);
+    border-radius: .6rem;
+}
+
+#darkMode-icon{
+    font-size: 1.33rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+
+
+section{
+    height: 100vh;
+    padding: 10rem 7% 2rem;
+}
+.home{
+    display: flex;
+    align-items: center;
+}
+.home .home-content{
+    position: absolute;
+    left: 8.5rem;
+    width: 500px;
+    height: 34.5rem;
+    margin-top: 8rem;
+    margin: -1rem;
+}
+
+span{
+    color: var(--main-color);
+}
+.logo span{
+    color: var(--main-color);
+}
+.home-content h3{
+    margin-top: .5rem;
+    margin-bottom: .3rem;
+    font-size: 1.6rem;
+    
+}
+.home-content h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 5rem;
+    line-height: 1;
+    margin-bottom: 0rem;
+}
+
+.home-content p{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: .1456rem solid var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
+    font-size: 1.5rem;
+    margin: 1rem 1.6rem 1rem 0;
+    color: var(--main-color);
+    transition: 0.3s ease;
+}
+.social-icons a:hover{
+    color: var(--white-color);
+    box-shadow: 0 0 25px var(--main-color);
+    background: var(--main-color);
+}
+.btn{
+    display: inline-block;
+    padding: .7rem 1rem;
+    background: var(--main-color);
+    box-shadow: 0 0.2 .5rem var(--shadow-color);
+    border-radius: .6rem;
+    font-size: 1rem;
+    color: var(--white-color);
+    border: .1500rem solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: var(--main-color);
+    background: transparent;
+    border-color: var(--main-color);
+}
+.btn-group{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.btn-group a:nth-of-type(2){
+    background: var(--white-color);
+    color: var(--main-color);
+    border: .1500rem solid var(--main-color);
+    border-radius: 0.6rem;
+    font-size: 1rem;
+    box-shadow: 0 0 25px transparent;
+    font-weight: 600;
+    cursor: pointer;
+    padding: .7rem 1rem;
+}
+.btn-group a:nth-of-type(2):hover{
+    box-shadow: 0 0 25px var(--mnain-color);
+    background: var(--main-color);
+    color: var(--white-color);
+}
+.text-animation {
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 280px;
+    position: relative;
+    display: inline-block;
+}
+
+.text-animation span {
+    position: relative;
+}
+
+.text-animation span::before {
+    content: "Web Developer"; /* Default text for the animation */
+    color: var(--mnain-color); /* Fixed: Added missing semicolon */
+    animation: words 20s infinite;
+}
+
+.text-animation span::after {
+    content: ""; /* Empty content to create a blinking cursor effect */
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color); /* Blinking cursor's initial state */
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+/* Cursor blinking animation */
+@keyframes cursor {
+    50% {
+        border-left: 2px solid var(--mnain-color); /* Corrected color variable */
+    }
+}
+
+/* Dynamic text animation */
+@keyframes words {
+    0%, 20% {
+        content: "School Student";
+    }
+    21%, 40% {
+        content: "Web Designer";
+    }
+    41%, 60% {
+        content: "Frontend Designer";
+    }
+    61%, 80% {
+        content: "Web Developer";
+    }
+    81%, 100% {
+        content: "Software Tester";
+    }
+}
+
+/* Typing animation for the cursor effect */
+@keyframes typing {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+        width: calc(100% + 8px);
+    }
+}
+
+.home .profession-container{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 768px;
+    height: 768px;
+    background: transparent;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.home .profession-container .profession-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 768px;
+    height: 768px;
+    background: #04a5e5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .profession-box .profession{
+    position: absolute;
+    display: flex;
+    left: 0;
+    align-items: center;
+    flex-direction: column;
+    color: var(--main-color);
+    transform: rotate(calc(360deg / 4 * var(--i)));
+    transform-origin: 384px;
+}
