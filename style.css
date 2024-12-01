@@ -85,7 +85,7 @@ section{
 .home .home-content{
     position: absolute;
     left: 8.5rem;
-    width: 500px;
+    width: 40vw;
     height: 34.5rem;
     margin-top: 8rem;
     margin: -1rem;
@@ -246,19 +246,18 @@ span{
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    width: 768px;
-    height: 768px;
+    width: 45rem;
+    height: 45rem;
     background: transparent;
-    overflow: hidden;
     pointer-events: none;
 }
 
 .home .profession-container .profession-box {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 768px;
-    height: 768px;
+    right: 10%;
+    width: 45rem;
+    height: 45rem;
     background: #04a5e5;
     border-radius: 50%;
     display: flex;
@@ -275,4 +274,30 @@ span{
     color: var(--main-color);
     transform: rotate(calc(360deg / 4 * var(--i)));
     transform-origin: 384px;
+}
+
+.profession{
+  z-index: 1000;
+  font-size: 2rem;
+}
+.proficon{
+  width:2rem;
+  height:2rem;
+}
+
+@media (max-width:1600x) and (min-width: 1080px){
+  .profession{
+    font-size: 1rem;
+  }
+}
+@media (max-width:1280px) and (min-width: 0px){
+  .profession-box,.profession,.profession-container{
+    display: none;
+  }
+
+  .home .home-content{
+      width: 95vw;
+      height: 34.5rem;
+      left:3rem;
+}
 }
